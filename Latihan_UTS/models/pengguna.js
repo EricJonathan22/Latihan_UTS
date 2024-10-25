@@ -1,0 +1,24 @@
+const { default: mongoose } = require("mongoose");
+const moongose = require("mongoose");
+
+const penggunaSchema = new mongoose.Schema({
+    nama: {
+        type:String,
+    },
+    email: {
+        type:String,
+    },
+    password:{
+        type: String,
+    },
+    alamat : {
+        type:String,
+    },
+    tanggal_daftar: {
+        type: Date,
+    },
+
+});
+
+const pengguna = mongoose.model('pengguna', penggunaSchema);
+module.exports = pengguna;
